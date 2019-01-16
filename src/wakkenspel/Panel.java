@@ -183,7 +183,7 @@ public class Panel extends JPanel {
 
                 dice1.rollDice();
                 break;
-                
+
                 case 4:
                     dice1.setBounds(115, 70, 72, 72);
                     dice2.setBounds(215,70,72,72);
