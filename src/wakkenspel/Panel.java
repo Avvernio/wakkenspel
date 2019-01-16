@@ -123,6 +123,21 @@ public class Panel extends JPanel {
         add(guessesWrong);
 
     }
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        System.out.println("test");
+
+        g.setColor(Color.GRAY);
+        g.fillRect(0, 275, 800, 450);
+
+        g.setColor(new Color(153,170,181));
+        g.fillRect(0, 530, 800, 35);
+
+        g.setColor(new Color(44,47,51));
+        g.setFont(new Font("SansSerif", Font.BOLD, 25));
+        g.drawString("Het Wakkenspel", 300, 30);
+    }
+
     class rollHandler implements ActionListener {
         public void actionPerformed(ActionEvent e){
             String amountString = amount.getText();
@@ -151,17 +166,215 @@ public class Panel extends JPanel {
         roll.setEnabled(false);
         amount.setEditable(false);
 
-        if(rollInt != 0) {
-            dice1.setBounds(115, 70, 72, 72);
-            dice2.setBounds(215,70,72,72);
+            switch (rollInt){
+            case 3:
+                dice1.setBounds(115, 70, 72, 72);
+                dice2.setBounds(0,0,72,72);
+                dice3.setBounds(0,0,72,72);
+                dice4.setBounds(0, 0, 72, 72);
+                dice5.setBounds(0, 0, 72, 72);
+                dice6.setBounds(0, 0, 72, 72);
+                dice7.setBounds(0, 0, 72, 72);
+                dice8.setBounds(0, 0, 72, 72);
+                dice9.setBounds(0, 0, 72, 72);
+                dice10.setBounds(0, 0, 72, 72);
+                dice11.setBounds(0, 0, 72, 72);
+                dice12.setBounds(0, 0, 72, 72);
 
-            dice1.rollDice();
-            dice2.rollDice();
-            System.out.println("test before repaint");
-        }
+                dice1.rollDice();
+                break;
+                
+                case 4:
+                    dice1.setBounds(115, 70, 72, 72);
+                    dice2.setBounds(215,70,72,72);
+                    dice3.setBounds(315,70,72,72);
+                    dice4.setBounds(415, 70, 72, 72);
+                    dice5.setBounds(0, 0, 72, 72);
+                    dice6.setBounds(0, 0, 72, 72);
+                    dice7.setBounds(0, 0, 72, 72);
+                    dice8.setBounds(0, 0, 72, 72);
+                    dice9.setBounds(0, 0, 72, 72);
+                    dice10.setBounds(0, 0, 72, 72);
+                    dice11.setBounds(0, 0, 72, 72);
+                    dice12.setBounds(0, 0, 72, 72);
+
+                    dice1.rollDice();
+                    dice2.rollDice();
+                    dice3.rollDice();
+                    dice4.rollDice();
+                    break;
+
+                case 5:
+                    dice1.setBounds(115, 70, 72, 72);
+                    dice2.setBounds(215,70,72,72);
+                    dice3.setBounds(315,70,72,72);
+                    dice4.setBounds(415, 70, 72, 72);
+                    dice5.setBounds(515, 70, 72, 72);
+
+                    dice1.rollDice();
+                    dice2.rollDice();
+                    dice3.rollDice();
+                    dice4.rollDice();
+                    dice5.rollDice();
+                    break;
+
+                case 6:
+                    dice1.setBounds(115, 70, 72, 72);
+                    dice2.setBounds(215,70,72,72);
+                    dice3.setBounds(315,70,72,72);
+                    dice4.setBounds(415, 70, 72, 72);
+                    dice5.setBounds(515, 70, 72, 72);
+                    dice6.setBounds(615, 70, 72, 72);
+
+                    dice1.rollDice();
+                    dice2.rollDice();
+                    dice3.rollDice();
+                    dice4.rollDice();
+                    dice5.rollDice();
+                    dice6.rollDice();
+                    break;
+
+                case 7:
+                    dice1.setBounds(115, 70, 72, 72);
+                    dice2.setBounds(215,70,72,72);
+                    dice3.setBounds(315,70,72,72);
+                    dice4.setBounds(415, 70, 72, 72);
+                    dice5.setBounds(515, 70, 72, 72);
+                    dice6.setBounds(615, 70, 72, 72);
+                    dice7.setBounds(115, 140, 72, 72);
+
+                    dice1.rollDice();
+                    dice2.rollDice();
+                    dice3.rollDice();
+                    dice4.rollDice();
+                    dice5.rollDice();
+                    dice6.rollDice();
+                    dice7.rollDice();
+                    break;
+
+                case 8:
+                    dice1.setBounds(115, 70, 72, 72);
+                    dice2.setBounds(215,70,72,72);
+                    dice3.setBounds(315,70,72,72);
+                    dice4.setBounds(415, 70, 72, 72);
+                    dice5.setBounds(515, 70, 72, 72);
+                    dice6.setBounds(615, 70, 72, 72);
+                    dice7.setBounds(115, 140, 72, 72);
+                    dice8.setBounds(215, 140, 72, 72);
+
+                    dice1.rollDice();
+                    dice2.rollDice();
+                    dice3.rollDice();
+                    dice4.rollDice();
+                    dice5.rollDice();
+                    dice6.rollDice();
+                    dice7.rollDice();
+                    dice8.rollDice();
+                    break;
+
+                case 9:
+                    dice1.setBounds(115, 70, 72, 72);
+                    dice2.setBounds(215,70,72,72);
+                    dice3.setBounds(315,70,72,72);
+                    dice4.setBounds(415, 70, 72, 72);
+                    dice5.setBounds(515, 70, 72, 72);
+                    dice6.setBounds(615, 70, 72, 72);
+                    dice7.setBounds(115, 140, 72, 72);
+                    dice8.setBounds(215, 140, 72, 72);
+                    dice9.setBounds(315, 140, 72, 72);
+
+                    dice1.rollDice();
+                    dice2.rollDice();
+                    dice3.rollDice();
+                    dice4.rollDice();
+                    dice5.rollDice();
+                    dice6.rollDice();
+                    dice7.rollDice();
+                    dice8.rollDice();
+                    dice9.rollDice();
+                    break;
+
+                case 10:
+                    dice1.setBounds(115, 70, 72, 72);
+                    dice2.setBounds(215,70,72,72);
+                    dice3.setBounds(315,70,72,72);
+                    dice4.setBounds(415, 70, 72, 72);
+                    dice5.setBounds(515, 70, 72, 72);
+                    dice6.setBounds(615, 70, 72, 72);
+                    dice7.setBounds(115, 140, 72, 72);
+                    dice8.setBounds(215, 140, 72, 72);
+                    dice9.setBounds(315, 140, 72, 72);
+                    dice10.setBounds(415, 140, 72, 72);
+
+                    dice1.rollDice();
+                    dice2.rollDice();
+                    dice3.rollDice();
+                    dice4.rollDice();
+                    dice5.rollDice();
+                    dice6.rollDice();
+                    dice7.rollDice();
+                    dice8.rollDice();
+                    dice9.rollDice();
+                    dice10.rollDice();
+                    break;
+
+                case 11:
+                    dice1.setBounds(115, 70, 72, 72);
+                    dice2.setBounds(215,70,72,72);
+                    dice3.setBounds(315,70,72,72);
+                    dice4.setBounds(415, 70, 72, 72);
+                    dice5.setBounds(515, 70, 72, 72);
+                    dice6.setBounds(615, 70, 72, 72);
+                    dice7.setBounds(115, 140, 72, 72);
+                    dice8.setBounds(215, 140, 72, 72);
+                    dice9.setBounds(315, 140, 72, 72);
+                    dice10.setBounds(415, 140, 72, 72);
+                    dice11.setBounds(515, 140, 72, 72);
+
+                    dice1.rollDice();
+                    dice2.rollDice();
+                    dice3.rollDice();
+                    dice4.rollDice();
+                    dice5.rollDice();
+                    dice6.rollDice();
+                    dice7.rollDice();
+                    dice8.rollDice();
+                    dice9.rollDice();
+                    dice10.rollDice();
+                    dice11.rollDice();
+                    break;
+
+                case 12:
+                    dice1.setBounds(115, 70, 72, 72);
+                    dice2.setBounds(215,70,72,72);
+                    dice3.setBounds(315,70,72,72);
+                    dice4.setBounds(415, 70, 72, 72);
+                    dice5.setBounds(515, 70, 72, 72);
+                    dice6.setBounds(615, 70, 72, 72);
+                    dice7.setBounds(115, 140, 72, 72);
+                    dice8.setBounds(215, 140, 72, 72);
+                    dice9.setBounds(315, 140, 72, 72);
+                    dice10.setBounds(415, 140, 72, 72);
+                    dice11.setBounds(515, 140, 72, 72);
+                    dice12.setBounds(615, 140, 72, 72);
+
+                    dice1.rollDice();
+                    dice2.rollDice();
+                    dice3.rollDice();
+                    dice4.rollDice();
+                    dice5.rollDice();
+                    dice6.rollDice();
+                    dice7.rollDice();
+                    dice8.rollDice();
+                    dice9.rollDice();
+                    dice10.rollDice();
+                    dice11.rollDice();
+                    dice12.rollDice();
+
+            }
         repaint();
-        System.out.println("repaint done");
     }
+
 
     class resetHandler implements ActionListener{
         public void actionPerformed(ActionEvent e){
