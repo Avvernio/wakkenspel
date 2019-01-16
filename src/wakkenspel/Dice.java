@@ -11,15 +11,15 @@ public class Dice extends JPanel {
         super.paintComponent(g);
         g.setColor(new Color(114,137,218));
         g.fillRect(0,0,75,75);
+        System.out.println("We get in paintcomponent");
+
         //paint dice background
-        if(dots >= 1){
-            g.setColor(Color.white);
+        if(dots != 0){
+            System.out.println("Dots is higher then 1");
+            g.setColor(Color.WHITE);
             g.fillRoundRect(0,0,70,70,25,25);
-            g.setColor(Color.black);
+            g.setColor(Color.BLACK);
             g.drawRoundRect(0,0,70,70,25,25);
-        }
-        else{
-            JOptionPane.showMessageDialog(null, "Voer een geldige hoeveelheid dobbelstenen in.", "Error", JOptionPane.INFORMATION_MESSAGE);
         }
         //fill dice with dots
         switch (dots){
@@ -52,11 +52,14 @@ public class Dice extends JPanel {
                 break;
         }
     }
+
+
         //Roll the dice!
         //make it an int, 6 because 6 dots, +1 because otherwise the max would be 5
-        public int roll(){
+        public void rollDice(){
             dots = (int)(6*Math.random()+1);
-            return dots;
+            //return dots;
+            System.out.println("Dots is: "+dots);
         }
 
         public int holeSolution(){
