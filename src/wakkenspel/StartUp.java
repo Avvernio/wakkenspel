@@ -7,7 +7,7 @@ import java.awt.*;
 public class StartUp extends JFrame {
 
     public static void main(String args[]){
-        String version = "0.1";
+        String version = "1.0.0";
 
         JFrame frame = new StartUp();
         frame.setSize(800, 600);
